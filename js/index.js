@@ -63,3 +63,39 @@ if (firstInOrder === hacker1) {
 } else {
   console.log('What?! You both have the same name?');
 }
+
+let Lorem1 =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non condimentum orci. Ut faucibus orci id interdum consequat. Ut velit enim, porttitor ac sollicitudin a, tempor vitae quam. Duis blandit in leo id lobortis. Morbi sit amet suscipit eros. In nibh augue, egestas a nunc consequat, aliquam maximus purus. Nullam venenatis commodo dolor fermentum convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras dignissim, sem at posuere aliquet, elit justo vulputate eros, a sagittis nibh velit nec nisl. Integer quis purus elit.';
+
+let Lorem2 =
+  'Sed eu consectetur ipsum, non faucibus nibh. Morbi accumsan dolor in erat mollis pretium. Donec at justo odio. In sit amet lectus vitae est mattis malesuada non non dui. Nam gravida aliquet eros, eget cursus ex vehicula at. Vivamus malesuada dolor ac elementum condimentum. Nam tempus suscipit erat, eu maximus ex viverra vitae. Vivamus luctus velit enim, ut interdum odio ultricies et. Curabitur iaculis dolor sed ipsum tristique tempor. Vivamus molestie commodo hendrerit. Vivamus quam odio, accumsan at tellus vitae, bibendum posuere nunc. Mauris eget odio sit amet risus tempus consectetur et at dui. Pellentesque tempor odio at lacinia lacinia.';
+
+let Lorem3 =
+  'Nulla venenatis, metus vitae rhoncus tristique, libero orci convallis ligula, eu laoreet nulla tortor dignissim libero. Duis venenatis ac sapien quis molestie. Cras eget purus quis eros semper vestibulum ac at diam. Integer ac tortor sapien. Quisque vel congue sapien, at vehicula lorem. Nam vitae neque in justo consequat consectetur sit amet vitae neque. Fusce scelerisque arcu vitae cursus semper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut sodales tortor.';
+
+let totalWords = 0;
+
+for (let i = 0; i < Lorem1.length; i++) {
+  if (Lorem1[i] === ' ') {
+    totalWords += 1;
+  }
+}
+//  Account for last word
+totalWords += 1;
+
+console.log(totalWords);
+
+etCount = 0;
+
+for (let i = 0; i < Lorem1.length; i++) {
+  if (
+    Lorem1[i] === ' ' &&
+    Lorem1[i + 1] === 'e' &&
+    Lorem1[i + 2] === 't' &&
+    Lorem1[i + 3] === ' '
+  ) {
+    etCount += 1;
+  }
+}
+
+console.log(etCount);
