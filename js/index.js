@@ -23,7 +23,8 @@ if (hacker1.length > hacker2.length) {
 
 // Iteration 3: Loops
 
-const string1 = '';
+// 3.1
+let string1 = '';
 
 for (let i = 0; i < hacker1.length; i++) {
   if (i < hacker1.length - 1) {
@@ -31,23 +32,31 @@ for (let i = 0; i < hacker1.length; i++) {
   } else if (i === hacker1.length - 1) {
     string1 += hacker1[i].toUpperCase();
   }
+
+  // Other method
+  // string1 += hacker1[i].toUpperCase();
+  // if (i < hacker.length -1) {
+  // string1 += ' ';
+  // }
 }
 
 console.log(string1);
 
-const string2 = '';
+// 3.2
+let string2 = '';
 
 for (let i = hacker2.length - 1; i > -1; i--) {
-  string2 = string2 + hacker2[i];
+  string2 += hacker2[i];
 }
 
 console.log(string2);
 
+// 3.3
 let longerString = hacker1.length > hacker2.length ? hacker1 : hacker2;
 firstInOrder = '';
 
-for (let i = 0; i < longerString.length; i++) {
-  if (hacker1[i] > hacker2[i]) {
+for (let i = hacker1.length - 1; i >= 0; i--) {
+  if (hacker1[i] < hacker2[i]) {
     firstInOrder = hacker1;
     break;
   } else if (hacker1[i] < hacker2[i]) {
@@ -64,6 +73,7 @@ if (firstInOrder === hacker1) {
   console.log('What?! You both have the same name?');
 }
 
+// Bonus 1
 const Lorem1 =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non condimentum orci. Ut faucibus orci id interdum consequat. Ut velit enim, porttitor ac sollicitudin a, tempor vitae quam. Duis blandit in leo id lobortis. Morbi sit amet suscipit eros. In nibh augue, egestas a nunc consequat, aliquam maximus purus. Nullam venenatis commodo dolor fermentum convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras dignissim, sem at posuere aliquet, elit justo vulputate eros, a sagittis nibh velit nec nisl. Integer quis purus elit.';
 
@@ -85,6 +95,8 @@ totalWords += 1;
 
 console.log(totalWords);
 
+// et Count
+
 let etCount = 0;
 
 for (let i = 0; i < Lorem1.length; i++) {
@@ -99,3 +111,33 @@ for (let i = 0; i < Lorem1.length; i++) {
 }
 
 console.log(etCount);
+
+// Bonus 2
+
+const phraseToCheck = 'A man, a plan, a canal, Panama!';
+let characters = '';
+
+for (let i = 0; i < phraseToCheck.length; i++) {
+  if (
+    phraseToCheck[i] === ' ' ||
+    phraseToCheck[i] === ',' ||
+    phraseToCheck[i] === '!' ||
+    phraseToCheck[i] === '?' ||
+    phraseToCheck[i] === "'"
+  ) {
+    continue;
+  }
+  characters += phraseToCheck[i].toLowerCase();
+}
+
+console.log(characters);
+
+let charactersReverse = '';
+
+for (i = characters.length - 1; i >= 0; i--) {
+  charactersReverse += characters[i];
+}
+
+if (characters === charactersReverse) {
+  console.log('This string is a Palindrome!');
+} else console.log('This string is not a Palindrome');
